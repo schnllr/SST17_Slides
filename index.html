@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>  Reproduzierbare Analysen mit R und RStudio</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Andrea Schnell  Statistisches Amt Kanton Zürich" />
+    <link rel="stylesheet" href="libs\testzh.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# <br> Reproduzierbare Analysen mit R und RStudio
+## Schweizer Statistiktage 2017
+### Andrea Schnell <br>Statistisches Amt Kanton Zürich
+
+---
+
+
+
+class: top, left
+
+#Agenda
+
+
+- Reproduzierbarkeit
+ 
+- Layout, Corporate Design
+
+- RMarkdown
+
+- RCommunity
+  - Zurich R User
+  - Stack Overflow
+
+
+
+---
+
+class: left, top
+
+
+# PDF-Publikationen
+
+
+
+
+.pull-left[
+[&lt;b&gt; statistik.info&lt;/b&gt;](https://statistik.zh.ch/internet/justiz_inneres/statistik/de/themen/statistikinfo.html)
+- Massgeschneidert
+- Eigenständig
+- Von einem Verfasser
+- Textlastig
+
+.center[&lt;IMG SRC=libs/info.gif width = "150" height = auto&gt;]
+
+
+]
+
+.pull-right[
+&lt;font color=#009ee0&gt;&lt;b&gt;Monitorings&lt;/b&gt;&lt;/font&gt;
+- Automatisiert
+- Parametrisierbar
+- Reproduzierbar
+- v.a. Tabellen und Grafiken
+
+.center[&lt;IMG SRC=libs/report.gif width = "150" height = auto&gt;]
+]
+
+
+---
+
+class: top, left
+
+# Workflow
+
+### Ist-Situaion
+- Analysis in various .r files
+- Produce graphics with R and save as .png
+- Include .png in Word template
+- Publish Word as PDF
+
+--
+
+### Mögliches Ziel
+Establish an analysis and publication process, that is
+- traceable
+- «reproducible»
+- allows publication of high quality charts and maps
+- in accordance to our corporate design
+
+--
+
+.large[&lt;font color=#009ee0&gt;➡ RMarkdown&lt;/font&gt;]
+
+
+
+
+---
+
+class: left, top
+
+
+# Build &lt;font color=#009ee0&gt;statRmd&lt;/font&gt;  package
+
+###  Why build a package?
+
+
+- Code organization
+
+- Consistent documentation
+
+- Code distribution
+
+
+&lt;!-- .center[ --&gt;
+&lt;!-- &lt;IMG SRC="http://hexb.in/hexagons/devtools.png" width = "100" height = auto&gt;&lt;IMG SRC="http://hexb.in/hexagons/roxygen2.png" width = "100" height = auto&gt;] --&gt;
+
+- Templates
+
+--
+
+### Content
+
+
+- RMarkdown Templates
+
+- Some helper functions
+
+---
+
+clas: top, left
+
+# Community1
+
+
+&lt;blockquote class="twitter-tweet" data-lang="de"&gt;&lt;p lang="en" dir="ltr"&gt;Can&amp;#39;t quite justify a whole post about it, but happy to give you some graphs and facts!&lt;br&gt;&lt;br&gt;Switzerland is very into R! &lt;a href="https://t.co/IYFfh9GqrG"&gt;pic.twitter.com/IYFfh9GqrG&lt;/a&gt;&lt;/p&gt;&amp;mdash; David Robinson (@drob) &lt;a href="https://twitter.com/drob/status/912806733562642434?ref_src=twsrc%5Etfw"&gt;26. September 2017&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;blockquote class="twitter-tweet" data-lang="de"&gt;&lt;p lang="en" dir="ltr"&gt;&lt;a href="https://twitter.com/hashtag/Switzerland?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Switzerland&lt;/a&gt; on top: &lt;a href="https://twitter.com/drob?ref_src=twsrc%5Etfw"&gt;@drob&lt;/a&gt; on &lt;a href="https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#rstats&lt;/a&gt; share of &lt;a href="https://twitter.com/hashtag/stackoverflow?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#stackoverflow&lt;/a&gt; questions per country vs gdp per capita &lt;a href="https://twitter.com/hashtag/user2017?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#user2017&lt;/a&gt; &lt;a href="https://t.co/6HGHhVjjOi"&gt;pic.twitter.com/6HGHhVjjOi&lt;/a&gt;&lt;/p&gt;&amp;mdash; Andrea Schnell (@schnllr) &lt;a href="https://twitter.com/schnllr/status/882585108724797440?ref_src=twsrc%5Etfw"&gt;5. Juli 2017&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+
+---
+
+class: top, left
+
+# Community &lt;br&gt; Zurich R User Group
+### «The use of R in public administration»
+
+
+
+
+---
+background-image: url("libs/sticker-01.png")
+background-position: bottom right
+background-size:30%
+
+class: top, left
+
+# Vielen Dank &lt;br&gt;für Ihre Aufmerksamkeit!
+
+&lt;br&gt;
+
+Folien  
+https://statistikzh.github.io/SST17/
+
+&lt;br&gt;
+
+.bottom[
+Andrea Schnell  
+[andrea.schnell@statistik.ji.zh.ch](mailto:andrea.schnell@statistik.ji.zh.ch)  
+043 259 75 58  
+]
+
+
+&lt;!-- .right[&lt;IMG SRC="libs/sticker-01.png" width = auto height = "150"&gt;] --&gt;
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"self_contained": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});
+(function() {var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler"); if (!r) return; s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }"; d.head.appendChild(s);})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
