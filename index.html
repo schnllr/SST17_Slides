@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>  Reproduzierbare Analysen mit R und RStudio</title>
+    <title>  Reproduzierbare Analysen  mit R und RStudio</title>
     <meta charset="utf-8">
     <meta name="author" content="Andrea Schnell  Statistisches Amt Kanton Zürich" />
+    <link href="libs/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="libs\testzh.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# <br> Reproduzierbare Analysen mit R und RStudio
+# <br> Reproduzierbare Analysen <br>mit R und RStudio
 ## Schweizer Statistiktage 2017
 ### Andrea Schnell <br>Statistisches Amt Kanton Zürich
 
@@ -23,15 +24,25 @@ class: top, left
 #Agenda
 
 
-- Reproduzierbarkeit
- 
-- Layout, Corporate Design
 
-- RMarkdown
 
-- RCommunity
-  - Zurich R User
-  - Stack Overflow
+
+<i class="fa  fa-files-o fa-2x "></i>   Reproduzierbarkeit  
+
+
+&lt;IMG SRC="http://hexb.in/hexagons/rmarkdown.png" width = "50" height = auto&gt;    RMarkdown  
+
+<i class="fa  fa-users fa-2x "></i>    RCommunity
+
+
+
+
+---
+background-image: url(<i class="fa  fa-files-o fa-2x "></i>)
+
+class: left, top
+
+# Reproduzierbarkeit
 
 
 
@@ -74,58 +85,67 @@ class: top, left
 
 # Workflow
 
-### Ist-Situaion
-- Analysis in various .r files
-- Produce graphics with R and save as .png
-- Include .png in Word template
-- Publish Word as PDF
+.pull-left[
+### Heute
+- Diverse R-Skripte
+  - Datenaufbereitung
+  - Datenauswertungen
+  - Grafiken, Karten, Tabellen
+- Word-Vorlage
+  - Text verfassen
+  - Grafiken etc. einfügen
+- PDF erstellen
+]
 
 --
 
-### Mögliches Ziel
-Establish an analysis and publication process, that is
-- traceable
-- «reproducible»
-- allows publication of high quality charts and maps
-- in accordance to our corporate design
+.pull-right[
+### Morgen
+
+- 1 Dokument
+  - R-Code
+  - Text
+  - Grafiken
+- Output als Word, PDF, HTML
+
+]
+
 
 --
 
-.large[&lt;font color=#009ee0&gt;➡ RMarkdown&lt;/font&gt;]
+
+.right[.large[&lt;font color=#009ee0&gt;➡ RMarkdown&lt;/font&gt;]]
+
+
+
 
 
 
 
 ---
 
-class: left, top
 
 
-# Build &lt;font color=#009ee0&gt;statRmd&lt;/font&gt;  package
+class: top, left
 
-###  Why build a package?
+# RMarkdown
 
+.left-column[
 
-- Code organization
+&lt;IMG SRC=libs/rmarkdown_wf.PNG width = "200" height = auto&gt;
+]
 
-- Consistent documentation
+.right-column[
+- Gesamte Analyse inkl. Resultaten an einem Ort
+- Kommentare, R Code, Metadaten, Grafiken
+- Reproduzierbarkeit
+- Outputformate: Word, PDF, HTML
+- Layoutvorgaben in Templates (LaTex, CSS)
+- Reproduzierbar
+- Parametrisierbar
+- Vereinfacht Zusammenarbeit
+]
 
-- Code distribution
-
-
-&lt;!-- .center[ --&gt;
-&lt;!-- &lt;IMG SRC="http://hexb.in/hexagons/devtools.png" width = "100" height = auto&gt;&lt;IMG SRC="http://hexb.in/hexagons/roxygen2.png" width = "100" height = auto&gt;] --&gt;
-
-- Templates
-
---
-
-### Content
-
-
-- RMarkdown Templates
-
-- Some helper functions
 
 ---
 
@@ -134,22 +154,19 @@ clas: top, left
 # Community1
 
 
-&lt;blockquote class="twitter-tweet" data-lang="de"&gt;&lt;p lang="en" dir="ltr"&gt;Can&amp;#39;t quite justify a whole post about it, but happy to give you some graphs and facts!&lt;br&gt;&lt;br&gt;Switzerland is very into R! &lt;a href="https://t.co/IYFfh9GqrG"&gt;pic.twitter.com/IYFfh9GqrG&lt;/a&gt;&lt;/p&gt;&amp;mdash; David Robinson (@drob) &lt;a href="https://twitter.com/drob/status/912806733562642434?ref_src=twsrc%5Etfw"&gt;26. September 2017&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
-
-&lt;blockquote class="twitter-tweet" data-lang="de"&gt;&lt;p lang="en" dir="ltr"&gt;&lt;a href="https://twitter.com/hashtag/Switzerland?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Switzerland&lt;/a&gt; on top: &lt;a href="https://twitter.com/drob?ref_src=twsrc%5Etfw"&gt;@drob&lt;/a&gt; on &lt;a href="https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#rstats&lt;/a&gt; share of &lt;a href="https://twitter.com/hashtag/stackoverflow?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#stackoverflow&lt;/a&gt; questions per country vs gdp per capita &lt;a href="https://twitter.com/hashtag/user2017?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#user2017&lt;/a&gt; &lt;a href="https://t.co/6HGHhVjjOi"&gt;pic.twitter.com/6HGHhVjjOi&lt;/a&gt;&lt;/p&gt;&amp;mdash; Andrea Schnell (@schnllr) &lt;a href="https://twitter.com/schnllr/status/882585108724797440?ref_src=twsrc%5Etfw"&gt;5. Juli 2017&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 
 
 ---
+background-image: <i class="fa  fa-meetup fa-5x "></i>
 
 class: top, left
 
-# Community &lt;br&gt; Zurich R User Group
+# &lt;font color=#009ee0&gt;Community&lt;/font&gt; &lt;br&gt; Zurich R User Group
 ### «The use of R in public administration»
 
 
 
+<i class="fa  fa-meetup fa-5x "></i>
 
 ---
 background-image: url("libs/sticker-01.png")
@@ -160,18 +177,28 @@ class: top, left
 
 # Vielen Dank &lt;br&gt;für Ihre Aufmerksamkeit!
 
-&lt;br&gt;
 
-Folien  
-https://statistikzh.github.io/SST17/
 
 &lt;br&gt;
 
-.bottom[
+
+<i class="fa  fa-github fa-2x "></i>
+https://schnllr.github.io/SST17_Slides  
+
+
+https://schnllr.github.io/Meetup
+
+
+
+
+
+&lt;br&gt;
+
+
 Andrea Schnell  
 [andrea.schnell@statistik.ji.zh.ch](mailto:andrea.schnell@statistik.ji.zh.ch)  
 043 259 75 58  
-]
+
 
 
 &lt;!-- .right[&lt;IMG SRC="libs/sticker-01.png" width = auto height = "150"&gt;] --&gt;
