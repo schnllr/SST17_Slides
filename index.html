@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>  Reproduzierbare Analysen  mit R und RStudio</title>
+    <title>  Reproduzierbare Analysen</title>
     <meta charset="utf-8">
     <meta name="author" content="Andrea Schnell  Statistisches Amt Kanton Zürich" />
     <link href="libs/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -11,7 +11,7 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# <br> Reproduzierbare Analysen <br>mit R und RStudio
+# <br> Reproduzierbare Analysen
 ## Schweizer Statistiktage 2017
 ### Andrea Schnell <br>Statistisches Amt Kanton Zürich
 
@@ -21,9 +21,9 @@ class: center, middle, inverse, title-slide
 
 class: top, left
 
+# Agenda
 <i class="fa  fa-list fa-3x fa-pull-right "></i>
-#Agenda
-##        
+   
 
 
 
@@ -33,51 +33,15 @@ class: top, left
 
 <i class="fa  fa-refresh fa-2x "></i>  Reproduzierbarkeit  
 
-<i class="fa  fa-file-code-o fa-2x "></i>  RMarkdown  
+<i class="fa  fa-file-code-o fa-2x "></i> RMarkdown
+
+<i class="fa  fa-wrench fa-2x "></i>  Tools
+
+
+
+&lt;br&gt;
 
 <i class="fa  fa-users fa-2x "></i>  RCommunity
-
-
-
-
----
-
-class: top, left
-<i class="fa  fa-refresh fa-3x fa-pull-right "></i>
-# Reproduzierbarkeit
-## Analyse-Workflow
-
-
-GESTERN 
-
-
-.pull-left[
-### Heute
-- Diverse R-Skripte
-  - Datenaufbereitung
-  - Datenauswertungen
-  - Grafiken, Karten, Tabellen
-- Word-Vorlage
-  - Text verfassen
-  - Grafiken etc. einfügen
-- PDF erstellen
-]
-
---
-
-.pull-right[
-### Morgen
-
-- 1 Dokument
-  - R-Code
-  - Text
-  - Grafiken
-- Output als Word, PDF, HTML
-
-]
-
-
-
 
 
 
@@ -85,28 +49,30 @@ GESTERN
 
 
 class: left, top
-
-<i class="fa  fa-refresh fa-3x fa-pull-right "></i>
 # Reproduzierbarkeit
+<i class="fa  fa-refresh fa-3x fa-pull-right "></i>
 ## Konzept
 
 &lt;br&gt;
 
-&lt;blockquote class="twitter-tweet" data-lang="de"&gt;&lt;p lang="en" dir="ltr"&gt;&amp;quot;you can&amp;#39;t write down mouse clicks&amp;quot; &lt;a href="https://twitter.com/edzerpebesma?ref_src=twsrc%5Etfw"&gt;@edzerpebesma&lt;/a&gt; on why to use &lt;a href="https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#rstats&lt;/a&gt; for reproducible &lt;a href="https://twitter.com/hashtag/GIS?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#GIS&lt;/a&gt; tasks &lt;a href="https://twitter.com/hashtag/useR2017?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#useR2017&lt;/a&gt;&lt;/p&gt;&amp;mdash; Statistik Kt. Zürich (@statistik_zh) &lt;a href="https://twitter.com/statistik_zh/status/882254567198646272?ref_src=twsrc%5Etfw"&gt;4. Juli 2017&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&gt;  «... you can't write down mouse clicks»  
+
+&lt;br&gt;
+
+--
+
+&gt; the data and code used to make a finding are available and they are
+sufficient for an independent researcher to recreate the finding.
+
 
 --
 
 &lt;br&gt;
+
 - nachvollziehbar
+- wiederverwendbar
 - automatisierbar
-- parametrisierbar
-- Kommentare
-- Datengrundlage noch vorhanden
 
---
-
-➡ Handlungsoptionen für neue Produkte 
 
 
 
@@ -114,62 +80,137 @@ class: left, top
 
 ---
 
+class: top, left
+# Reproduzierbarkeit
+<i class="fa  fa-refresh fa-3x fa-pull-right "></i>
+## Analyseschritte
+
+
+.pull-left[
+- Daten  
+<i class="fa  fa-table fa-2x "></i> <i class="fa  fa-file-excel-o fa-2x "></i> <i class="fa  fa-database fa-2x "></i>
+
+- Auswertungen  
+<i class="fa  fa-file-excel-o fa-2x "></i> <i class="fa  fa-file-code-o fa-2x "></i> 
+
+- Grafiken  
+<i class="fa  fa-bar-chart fa-2x "></i> <i class="fa  fa-pie-chart fa-2x "></i> <i class="fa  fa-area-chart fa-2x "></i>
+
+- Text  
+<i class="fa  fa-file-word-o fa-2x "></i>  
+
+- Publikation  
+<i class="fa  fa-file-pdf-o fa-2x "></i>
+]
+
+--
+
+.pull-right[.bottom[
+&gt; - viele Dokumente
+&gt; - händische, manuelle Schritte
+&gt; - schwierig nachvollziehbar
+&gt; - kaum reproduzierbar]]
+
+---
 
 
 class: top, left
-<i class="fa  fa-file-code-o fa-3x fa-pull-right "></i>
+
 # RMarkdown
+<i class="fa  fa-file-code-o fa-3x fa-pull-right "></i>
 ## Idee
 
-.left-column[
-&lt;IMG SRC=libs/rmarkdown_wf.PNG width = "200" height = auto&gt;
-]
+.left-column[&lt;IMG SRC=libs/rmarkdown_wf.PNG width = "200" height = auto&gt;]
+
+
+--
 
 .right-column[
+
 - Gesamte Analyse inkl. Resultaten an einem Ort
 - Kommentare, R Code, Metadaten, Grafiken
 
 - Outputformate: Word, PDF, HTML
-- Layoutvorgaben in Templates (LaTex, CSS)
+- Layoutvorgaben in Templates (LaTeX, CSS)
+]
 
-- Vereinfacht Zusammenarbeit
+&lt;br&gt;
+
+--
+
+.pull-right[
+&gt; - nachvollziehbar
+&gt; - reproduzierbar
+&gt; - vereinfacht Zusammenarbeit
+
 ]
 
 
+
 ---
 
 class: top, left
-<i class="fa  fa-file-code-o fa-3x fa-pull-right "></i>
+
 # RMarkdown
+<i class="fa  fa-file-code-o fa-3x fa-pull-right "></i>
 ## Output PDF
 
+&lt;br&gt;
 
-.pull-left[&lt;IMG SRC=libs/rmarkdown_input.PNG width = "400" height = auto&gt;]
+.pull-left[&lt;IMG SRC=libs/rmarkdown_input.PNG width = "350" height = auto&gt;]
+
 --
-.pull-right[&lt;IMG SRC=libs/rmarkdown_pdf.PNG width = "400" height = auto&gt;]
+.pull-right[&lt;IMG SRC=libs/rmarkdown_pdf2.PNG width = "400" height = auto&gt;]
+
+
 ---
 
 class: top, left
-<i class="fa  fa-file-code-o fa-3x fa-pull-right "></i>
+
 # RMarkdown
+<i class="fa  fa-file-code-o fa-3x fa-pull-right "></i>
 ## Output HTML
 
+&lt;br&gt;
 
-.pull-left[&lt;IMG SRC=libs/rmarkdown_input.PNG width = "400" height = auto&gt;]
+.pull-left[&lt;IMG SRC=libs/rmarkdown_input.PNG width = "350" height = auto&gt;]
+
 --
-.pull-right[&lt;iframe src='libs/RMarkdown.html' width = "400" height = "450"&gt;&lt;/iframe&gt;]
+
+.pull-right[&lt;iframe src='libs/RMarkdown.html' width = "400" height = "400"&gt;&lt;/iframe&gt;]
 
 ---
 
+
+
 class: top, left
-<i class="fa  fa-users fa-3x fa-pull-right "></i>
+
+# Tools
+<i class="fa  fa-wrench fa-3x fa-pull-right "></i>
+## R und mehr
+
+- RMarkdown
+- Templates
+- RProjects
+- RPackages
+
+- Git/Github
+
+
+---
+
+
+
+class: inverse, left, middle
+
 # Community
+<i class="fa  fa-users fa-3x fa-pull-right "></i>
 ## «... one of R's best features»
 
 
 
 
-&lt;IMG SRC = https://gist.githubusercontent.com/daroczig/3cf06d6db4be2bbe3368/raw/8e970fad675d443813be2c98c508e6224491495e/number-of-submitted-packages-to-CRAN.png width = "450"&gt;
+&lt;!-- &lt;IMG SRC = https://gist.githubusercontent.com/daroczig/3cf06d6db4be2bbe3368/raw/8e970fad675d443813be2c98c508e6224491495e/number-of-submitted-packages-to-CRAN.png width = "450"&gt; --&gt;
 
 
 
@@ -180,8 +221,9 @@ class: top, left
 ---
 
 class: top, left
-<i class="fa  fa-users fa-3x fa-pull-right "></i>
+
 # Community
+<i class="fa  fa-users fa-3x fa-pull-right "></i>
 ## Zurich R User Group
 ### «The use of R in public administration»
 
@@ -189,7 +231,9 @@ class: top, left
 .pull-left[&lt;IMG SRC=libs/RMeetup_agenda.PNG width = "420" height = auto&gt;]
 .pull-right[&lt;IMG SRC=libs/20171107_190044.jpg width = "420" height = auto&gt;
 &lt;br&gt;
-.right[<i class="fa  fa-github "></i> https://statistikzh.github.io/RMeetup]]  
+.right[https://statistikzh.github.io/RMeetup]]  
+
+
 
 
 
@@ -202,27 +246,25 @@ background-size:30%
 class: top, left
 
 
-&lt;br&gt;
 
 &lt;font color=#009ee0 size = "30"&gt; &lt;b&gt; Vielen Dank &lt;br&gt;für Ihre Aufmerksamkeit!&lt;/b&gt;&lt;/font&gt; 
 
 &lt;br&gt;
 
 
-<i class="fa  fa-github "></i> https://statistikzh.github.io/SST17  
-
-
-
-
-
+Andrea Schnell  
+[andrea.schnell@statistik.ji.zh.ch](mailto:andrea.schnell@statistik.ji.zh.ch)  
 
 &lt;br&gt;
 
 
-Andrea Schnell  
-[andrea.schnell@statistik.ji.zh.ch](mailto:andrea.schnell@statistik.ji.zh.ch)  
-043 259 75 58  
 
+<i class="fa  fa-twitter "></i> &lt;a href="https://twitter.com/statistik_zh?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false"&gt;@statistik_zh&lt;/a&gt;&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+<i class="fa  fa-github "></i> https://statistikzh.github.io/SST17
+
+&lt;br&gt;
+&lt;small&gt;Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).&lt;/small&gt;
 
 
 &lt;!-- .right[&lt;IMG SRC="libs/sticker-01.png" width = auto height = "150"&gt;] --&gt;

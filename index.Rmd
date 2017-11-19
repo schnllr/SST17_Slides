@@ -1,5 +1,5 @@
 ---
-title:  "<br> Reproduzierbare Analysen <br>mit R und RStudio"
+title:  "<br> Reproduzierbare Analysen"
 subtitle: "Schweizer Statistiktage 2017"
 author: "Andrea Schnell <br>Statistisches Amt Kanton Zürich"
 output:
@@ -17,9 +17,9 @@ output:
 
 class: top, left
 
+# Agenda
 `r icon::fa_list(size = 3, pull = "right")`
-#Agenda
-##        
+   
 
 ```{r setup, include=FALSE}
 htmltools::tagList(rmarkdown::html_dependency_font_awesome())
@@ -29,7 +29,7 @@ knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 ```{r, echo = F}
 library(icon)
 
-
+icon::html
 
 ```
 
@@ -37,51 +37,15 @@ library(icon)
 
 `r icon::fa_refresh(size = 2)`  Reproduzierbarkeit  
 
-`r icon::fa_file_code_o(size = 2)`  RMarkdown  
+`r icon::fa_file_code_o(size = 2)` RMarkdown
+
+`r icon::fa_wrench(size = 2)`  Tools
+
+
+
+<br>
 
 `r icon::fa_users(size = 2)`  RCommunity
-
-
-
-
----
-
-class: top, left
-`r icon::fa_refresh(size = 3, pull= "right")`
-# Reproduzierbarkeit
-## Analyse-Workflow
-
-
-GESTERN 
-
-
-.pull-left[
-### Heute
-- Diverse R-Skripte
-  - Datenaufbereitung
-  - Datenauswertungen
-  - Grafiken, Karten, Tabellen
-- Word-Vorlage
-  - Text verfassen
-  - Grafiken etc. einfügen
-- PDF erstellen
-]
-
---
-
-.pull-right[
-### Morgen
-
-- 1 Dokument
-  - R-Code
-  - Text
-  - Grafiken
-- Output als Word, PDF, HTML
-
-]
-
-
-
 
 
 
@@ -89,28 +53,30 @@ GESTERN
 
 
 class: left, top
-
-`r icon::fa_refresh(size = 3, pull= "right")`
 # Reproduzierbarkeit
+`r icon::fa_refresh(size = 3, pull= "right")`
 ## Konzept
 
 <br>
 
-<blockquote class="twitter-tweet" data-lang="de"><p lang="en" dir="ltr">&quot;you can&#39;t write down mouse clicks&quot; <a href="https://twitter.com/edzerpebesma?ref_src=twsrc%5Etfw">@edzerpebesma</a> on why to use <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> for reproducible <a href="https://twitter.com/hashtag/GIS?src=hash&amp;ref_src=twsrc%5Etfw">#GIS</a> tasks <a href="https://twitter.com/hashtag/useR2017?src=hash&amp;ref_src=twsrc%5Etfw">#useR2017</a></p>&mdash; Statistik Kt. Zürich (@statistik_zh) <a href="https://twitter.com/statistik_zh/status/882254567198646272?ref_src=twsrc%5Etfw">4. Juli 2017</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+>  «... you can't write down mouse clicks»  
+
+<br>
+
+--
+
+> the data and code used to make a finding are available and they are
+sufficient for an independent researcher to recreate the finding.
+
 
 --
 
 <br>
+
 - nachvollziehbar
+- wiederverwendbar
 - automatisierbar
-- parametrisierbar
-- Kommentare
-- Datengrundlage noch vorhanden
 
---
-
-➡ Handlungsoptionen für neue Produkte 
 
 
 
@@ -118,62 +84,137 @@ class: left, top
 
 ---
 
+class: top, left
+# Reproduzierbarkeit
+`r icon::fa_refresh(size = 3, pull= "right")`
+## Analyseschritte
+
+
+.pull-left[
+- Daten  
+`r icon::fa_table(size = 2)` `r icon::fa_file_excel_o(size = 2)` `r icon::fa_database(size = 2)`
+
+- Auswertungen  
+`r icon::fa_file_excel_o(size = 2)` `r icon::fa_file_code_o(size = 2)` 
+
+- Grafiken  
+`r icon::fa_bar_chart(size = 2)` `r icon::fa_pie_chart(size = 2)` `r icon::fa_area_chart(size = 2)`
+
+- Text  
+`r icon::fa_file_word_o(size = 2)`  
+
+- Publikation  
+`r icon::fa_file_pdf_o(size = 2)`
+]
+
+--
+
+.pull-right[.bottom[
+> - viele Dokumente
+> - händische, manuelle Schritte
+> - schwierig nachvollziehbar
+> - kaum reproduzierbar]]
+
+---
 
 
 class: top, left
-`r icon::fa_file_code_o(size = 3, pull = "right")`
+
 # RMarkdown
+`r icon::fa_file_code_o(size = 3, pull = "right")`
 ## Idee
 
-.left-column[
-<IMG SRC=libs/rmarkdown_wf.PNG width = "200" height = auto>
-]
+.left-column[<IMG SRC=libs/rmarkdown_wf.PNG width = "200" height = auto>]
+
+
+--
 
 .right-column[
+
 - Gesamte Analyse inkl. Resultaten an einem Ort
 - Kommentare, R Code, Metadaten, Grafiken
 
 - Outputformate: Word, PDF, HTML
-- Layoutvorgaben in Templates (LaTex, CSS)
+- Layoutvorgaben in Templates (LaTeX, CSS)
+]
 
-- Vereinfacht Zusammenarbeit
+<br>
+
+--
+
+.pull-right[
+> - nachvollziehbar
+> - reproduzierbar
+> - vereinfacht Zusammenarbeit
+
 ]
 
 
+
 ---
 
 class: top, left
-`r icon::fa_file_code_o(size = 3, pull = "right")`
+
 # RMarkdown
+`r icon::fa_file_code_o(size = 3, pull = "right")`
 ## Output PDF
 
+<br>
 
-.pull-left[<IMG SRC=libs/rmarkdown_input.PNG width = "400" height = auto>]
+.pull-left[<IMG SRC=libs/rmarkdown_input.PNG width = "350" height = auto>]
+
 --
-.pull-right[<IMG SRC=libs/rmarkdown_pdf.PNG width = "400" height = auto>]
+.pull-right[<IMG SRC=libs/rmarkdown_pdf2.PNG width = "400" height = auto>]
+
+
 ---
 
 class: top, left
-`r icon::fa_file_code_o(size = 3, pull = "right")`
+
 # RMarkdown
+`r icon::fa_file_code_o(size = 3, pull = "right")`
 ## Output HTML
 
+<br>
 
-.pull-left[<IMG SRC=libs/rmarkdown_input.PNG width = "400" height = auto>]
+.pull-left[<IMG SRC=libs/rmarkdown_input.PNG width = "350" height = auto>]
+
 --
-.pull-right[<iframe src='libs/RMarkdown.html' width = "400" height = "450"></iframe>]
+
+.pull-right[<iframe src='libs/RMarkdown.html' width = "400" height = "400"></iframe>]
 
 ---
 
+
+
 class: top, left
-`r icon::fa_users(size = 3, pull = "right")`
+
+# Tools
+`r icon::fa_wrench(size = 3, pull= "right")`
+## R und mehr
+
+- RMarkdown
+- Templates
+- RProjects
+- RPackages
+
+- Git/Github
+
+
+---
+
+
+
+class: inverse, left, middle
+
 # Community
+`r icon::fa_users(size = 3, pull = "right")`
 ## «... one of R's best features»
 
 
 
 
-<IMG SRC = https://gist.githubusercontent.com/daroczig/3cf06d6db4be2bbe3368/raw/8e970fad675d443813be2c98c508e6224491495e/number-of-submitted-packages-to-CRAN.png width = "450">
+<!-- <IMG SRC = https://gist.githubusercontent.com/daroczig/3cf06d6db4be2bbe3368/raw/8e970fad675d443813be2c98c508e6224491495e/number-of-submitted-packages-to-CRAN.png width = "450"> -->
 
 
 
@@ -184,8 +225,9 @@ class: top, left
 ---
 
 class: top, left
-`r icon::fa_users(size = 3, pull = "right")`
+
 # Community
+`r icon::fa_users(size = 3, pull = "right")`
 ## Zurich R User Group
 ### «The use of R in public administration»
 
@@ -193,7 +235,9 @@ class: top, left
 .pull-left[<IMG SRC=libs/RMeetup_agenda.PNG width = "420" height = auto>]
 .pull-right[<IMG SRC=libs/20171107_190044.jpg width = "420" height = auto>
 <br>
-.right[`r icon::fa_github(size = 1)` https://statistikzh.github.io/RMeetup]]  
+.right[https://statistikzh.github.io/RMeetup]]  
+
+
 
 
 
@@ -206,27 +250,25 @@ background-size:30%
 class: top, left
 
 
-<br>
 
 <font color=#009ee0 size = "30"> <b> Vielen Dank <br>für Ihre Aufmerksamkeit!</b></font> 
 
 <br>
 
 
-`r icon::fa_github(size = 1)` https://statistikzh.github.io/SST17  
-
-
-
-
-
+Andrea Schnell  
+[andrea.schnell@statistik.ji.zh.ch](mailto:andrea.schnell@statistik.ji.zh.ch)  
 
 <br>
 
 
-Andrea Schnell  
-[andrea.schnell@statistik.ji.zh.ch](mailto:andrea.schnell@statistik.ji.zh.ch)  
-043 259 75 58  
 
+`r icon::fa_twitter(size = 1)` <a href="https://twitter.com/statistik_zh?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">@statistik_zh</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+`r icon::fa_github(size = 1)` https://statistikzh.github.io/SST17
+
+<br>
+<small>Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).</small>
 
 
 <!-- .right[<IMG SRC="libs/sticker-01.png" width = auto height = "150">] -->
