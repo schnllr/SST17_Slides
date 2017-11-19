@@ -181,7 +181,7 @@ class: top, left
 
 --
 
-.pull-right[<iframe src='libs/RMarkdown.html' width = "400" height = "400"></iframe>]
+.pull-right[<iframe src='libs/RMarkdown.html' width = "400" height = "430"></iframe>]
 
 ---
 
